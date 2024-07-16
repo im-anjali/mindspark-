@@ -1,0 +1,507 @@
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url(./bg.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(7, 7, 64);
+}
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    /* overflow: hidden; */
+  
+}
+
+
+/* Optional: Ensure parent elements have no unexpected overflow settings */
+body {
+    position: relative;
+}
+.logocont{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 40px;
+}
+
+.logo img {
+    height: 150px;
+    /* Initial glow effect using drop-shadow */
+    filter: drop-shadow(5px 3px 5px rgb(91, 113, 236)); /* More intense glow for the image */
+    transition: filter 0.5s ease-out; /* Transition for glow effect */
+}
+
+.logo{
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 130px;
+    width: 550px;
+  /* Apply glow effect to the container */
+  /* box-shadow: 0 0 10px 5px white; */
+  transition: box-shadow 0.5s ease-out; /* Transition for glow effect */
+}
+.logo:hover{
+    cursor: pointer;
+}
+h1{
+    margin-top: 70px;
+    font-size: 4rem;
+    font-family: "monsterrat", sans-serif;
+    filter: drop-shadow(0px 0 5px rgb(0, 38, 255)); /* Less intense glow */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+.futura{
+    color: aliceblue;
+    /* margin-left: 650px; */
+    font-family: 'Azonix', sans-serif;
+    font-size: 1rem;
+    margin-top: 20px;
+       /* text-align: right;
+    margin-right: 100px; */
+    text-align: right; /* Align text to the left by default */
+    
+}
+@font-face {
+    font-family: 'Azonix';
+    src: url('/azonix/Azonix.otf') format('opentype');
+}
+.title {
+    color: aliceblue;
+    font-size: 2rem;
+     text-align: center;
+    font-family:'Azonix', sans-serif ;
+    font-weight: 400;
+   
+    transition: text-shadow 0.3s ease-in-out; /* Smooth transition for the glow effect */
+}
+.title .game:hover {
+    cursor: pointer;
+}
+.bigcard {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+.cards {
+    height: 250px;
+    width: 250px;
+    backdrop-filter: blur(10px);
+    border: 2px solid white;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: aliceblue;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Font Awesome 5 Free';
+    font-size: 1.3rem;
+}
+.register{
+    margin-left: 45px;
+}
+
+.cards:hover {
+    box-shadow: 0 3px 50px rgba(255, 255, 255, 0.8);
+    transform: scale(1.05) rotate(0deg);
+    /* animation: pulse 1.5s 1; */
+}
+
+.cards::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    transition: opacity 0.3s;
+    opacity: 0;
+    transform: rotate(25deg);
+    pointer-events: none;
+}
+
+.cards:hover::before {
+    opacity: 1;
+    animation: shimmer 1.5s 1;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    50% {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translate(-70%, -70%) rotate(50deg);
+    }
+    100% {
+        transform: translate(70%, 70%) rotate(50deg);
+    }
+}
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    /* background-color: #ebe1e1; */
+    color: white;
+    cursor: pointer;
+    font-size: 1.3em;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 60px;
+    margin-left: 70px;
+    width: 60px;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid white;
+    margin-top: -0.3%;
+}
+
+
+.reg img{
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+.hr{
+    border: none;
+    border-top: 2px solid white; /* Set the color and thickness of the line */
+    width: 70%; /* Adjust the width as needed */
+    margin-top: 60px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add blur effect */
+}
+.bigcont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Adjust spacing between containers */
+    gap: 20px; /* Gap between containers */
+    margin-top: 20px; /* Optional margin for top spacing */
+}
+
+.container,
+.container1,
+.container2 {
+    width: 100%; /* Full width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.eventbig {
+    border: 2px solid white;
+    width: 60vw; /* Width as 60% of the viewport width */
+    min-height: 60vh; /* Minimum height as 60% of the viewport height */
+    color: aliceblue;
+    padding: 20px; /* Optional padding */
+    box-sizing: border-box;
+    backdrop-filter: blur(10px); /* Apply the blur effect */
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text within the element */
+    border-radius: 20px;
+}
+
+.events {
+    font-size: 1.7rem;
+    color: azure;
+    font-family: 'Azonix', sans-serif;
+    text-align: center;
+}
+
+.eventpara {
+    font-size: 1.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.registration-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.registration-table th,
+.registration-table td {
+    border: 1px solid white; /* White border */
+    padding: 8px;
+    text-align: left;
+    color: aliceblue;
+}
+.moreText {
+    display: none;
+}
+
+#readLessBtn1  {
+    display: none;
+    background-color: transparent;
+    border: 1px solid white;
+    color:white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px ;
+    outline: none;
+    border: 2px solid white ;
+    height: 50px;
+    font-size: 1rem;
+
+}
+#readMoreBtn1{
+    background-color: transparent;
+    border: 1px solid white;
+    color:white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px ;
+    outline: none;
+    border: 2px solid white ;
+    height: 50px;
+    font-size: 1rem;
+ 
+}
+
+.toggleContent {
+    display: none; /* Initially hide the additional content */
+}
+
+.toggleBtn.hide {
+    display: none; /* Initially hide the "Read Less" button */
+}
+
+.toggleBtn {
+    background-color: transparent;
+    border: 1px solid white;
+    color:white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px ;
+    outline: none;
+    border: 2px solid white ;
+    height: 50px;
+    font-size: 1rem;
+
+}
+
+
+
+
+@media (max-width: 768px) {
+    .logocont {
+        width: 100%;
+    }
+    .futura {
+        font-family: 'Azonix', sans-serif;
+        font-size: 1rem;
+        color: aliceblue;
+        text-align: center;
+    }
+    .title {
+        text-align: center;
+       
+    }
+    
+    .bigcont {
+        flex-direction: column; /* Display containers stacked on smaller screens */
+        align-items: center; /* Center-align all items */
+    }
+    .container,
+    .container1,
+    .container2 {
+        width: 100%; /* Full width */
+        margin-bottom: 20px; /* Add some bottom margin for spacing */
+        display: flex;
+        justify-content: center; /* Center-align content horizontally */
+    }
+    .eventbig {
+        width: 80vw; /* Adjust width to fit better on small screens */
+        min-height: 50vh; /* Adjust height to fit better on small screens */
+        padding: 10px; /* Reduce padding for better fit */
+        border-radius: 10px; /* Adjust border-radius for smaller screens */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
+        text-align: center; /* Center text within the element */
+    }
+    .events {
+        font-size: 1.2rem; /* Smaller font size for headings */
+    }
+    .eventpara {
+        font-size: 1rem; /* Smaller font size for paragraphs */
+    }
+    .registration-table {
+        font-size: 0.8rem; /* Smaller font size for table content */
+        margin: 0 auto; /* Center the table */
+    }
+}
+
+    @media (max-width:541px){
+        .logo img{
+            height: 110px;
+            margin-top: 20px;
+        }
+        h1{
+          font-size: 2.5rem;
+          
+        }
+        .logocont{
+           
+            margin-top: 10px;
+        }
+        .futura{
+            font-size: 0.9rem;
+        }
+       .game{
+        font-size: 2.2rem;;
+       }
+    }
+
+
+@media (max-width: 500px) {
+    .logocont {
+        width: 100%;
+    }
+    .futura {
+        font-family: 'Azonix', sans-serif;
+        font-size: 0.9rem; /* Adjusted font size for readability */
+        color: aliceblue;
+        text-align: center;
+    }
+    .title {
+        text-align: center;
+    }
+    .bigcont {
+        flex-direction: column; /* Display containers stacked on smaller screens */
+        align-items: center; /* Center-align all items */
+    }
+    .container,
+    .container1,
+    .container2 {
+        width: 100%; /* Full width */
+        margin-bottom: 20px; /* Add some bottom margin for spacing */
+        display: flex;
+        justify-content: center; /* Center-align content horizontally */
+    }
+    .eventbig {
+        width: 85vw; /* Adjust width to fit better on small screens */
+        min-height: 55vh; /* Adjust height to fit better on small screens */
+        padding: 15px; /* Reduce padding for better fit */
+        border-radius: 12px; /* Adjust border-radius for smaller screens */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
+        text-align: center; /* Center text within the element */
+    }
+    .events {
+        font-size: 1.3rem; /* Adjusted font size for headings */
+    }
+    .eventpara {
+        font-size: 1.1rem; /* Adjusted font size for paragraphs */
+    }
+    .registration-table {
+        font-size: 0.9rem; /* Adjusted font size for table content */
+        margin: 0 auto; /* Center the table */
+    }
+}
+
+@media (max-width: 400px) {
+    .logocont {
+        width: 100%;
+    }
+    .futura {
+        font-family: 'Azonix', sans-serif;
+        font-size: 0.8rem; /* Smaller font size for better readability on small screens */
+        color: aliceblue;
+        text-align: center;
+    }
+    .title {
+        text-align: center;
+    }
+    .bigcont {
+        flex-direction: column; /* Display containers stacked on smaller screens */
+        align-items: center; /* Center-align all items */
+    }
+    .container,
+    .container1,
+    .container2 {
+        width: 100%; /* Full width */
+        margin-bottom: 20px; /* Add some bottom margin for spacing */
+        display: flex;
+        justify-content: center; /* Center-align content horizontally */
+    }
+    .eventbig {
+        width: 80vw; /* Adjust width to fit better on small screens */
+        min-height: 50vh; /* Adjust height to fit better on small screens */
+        padding: 10px; /* Reduce padding for better fit */
+        border-radius: 10px; /* Adjust border-radius for smaller screens */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
+        text-align: center; /* Center text within the element */
+    }
+    .events {
+        font-size: 1.2rem; /* Smaller font size for headings */
+    }
+    .eventpara {
+        font-size: 1rem; /* Smaller font size for paragraphs */
+    }
+    .registration-table {
+        font-size: 0.8rem; /* Smaller font size for table content */
+        margin: 0 auto; /* Center the table */
+    }
+}
+::-webkit-scrollbar-track {
+    background-color: black; /* Set the background color of the scrollbar track to black */
+    border-radius: 0;
+    box-shadow: inset 0 0 6px black; /* Optional: Add a subtle shadow to the scrollbar track */
+}
+
+/* Style for the scrollbar itself */
+::-webkit-scrollbar {
+    width: 16px; /* Set the width of the scrollbar */
+    background-color: black; /* Set the background color of the scrollbar itself to black */
+}
+
+/* Style for the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background: rgb(86, 85, 85); /* Set the background color of the scrollbar thumb to gray */
+    border-radius: 0;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow to the scrollbar thumb */
+}
+
+/* Style for the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: black; /* Change the background color of the scrollbar thumb on hover to black */
+}
